@@ -1,0 +1,9 @@
+---
+ - name: Gather uptime data
+   shell: uptime
+   register: uptime_output
+
+ - name: Store uptime data in a file
+   copy:
+                content: "{{ uptime_output.stdout }}"
+                dest: "/opt/{{ inventory_hostname }}"
