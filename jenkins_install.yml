@@ -1,0 +1,5 @@
+---
+- hosts: 13.127.15.18
+  become: yes
+  roles:
+    - jenkins_install

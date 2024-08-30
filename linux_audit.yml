@@ -1,0 +1,6 @@
+---
+ - name: Uptime audit playbook
+   hosts: client
+   become: true
+   roles:
+     - Linux_audit
